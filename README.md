@@ -19,4 +19,29 @@ Si un joueur forme un "octo" (un mot de 8 lettres), il défausse une de ses lett
 Les lettres éjectées du rail sont attribués à l'autre joueur.
 On a la possibilité de retourner le rail et former des mots.
 
+## Répartition du code
+
+Nous avons réparti le code dans plusieurs fichiers :
+- les fichiers d'en-tête
+- les fichiers source
+- le fichier main
+
+Les fichiers d'en-tête nous ont permis de définir toutes les structures, variables et prototypes de fonctions nécéssaire au projet.
+Les fichiers sources contiennent le code des fonctions prédéfinies plus tôt.
+Le fichier main permet d'éxécuter et débugger le code.
+
+### dictionnaire.h
+
+- Contient le dictionnaire avec tous les mots utilisable.
+
+### joueur.h
+
+- Définit la structure joueur
+- Définit ce que peux faire le joueur (tourner le rail, proposer un mot)
+
+### partie.h
+
+- Définit la structure partie
+- Définit le déroulement de la partie (initialisation de la pioche, distribution des lettres, vérification du mot,...)
+
 
