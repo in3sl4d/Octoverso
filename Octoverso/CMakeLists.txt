@@ -6,4 +6,7 @@ set(CMAKE_C_STANDARD 11)
 add_executable(Octoverso main.c
         dictionnaire.c
         joueur.h
-        jeu.h)
+        jeu.h
+        dictionnaire.h
+        jeu.c
+        chevalet.h)

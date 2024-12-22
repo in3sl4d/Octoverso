@@ -4,6 +4,14 @@
 
 #pragma once
 #include "joueur.h"
+#include "dictionnaire.h"
+#include "chevalet.h"
+
+typedef struct {
+ Joueur* joueur1;
+ Joueur* joueur2;
+ Chevalet pioche[];
+};
 
 /**
  * @brief Permet d'initialiser une partie.
@@ -20,4 +28,12 @@ void distribution(Joueur* joueur1, Joueur* joueur2);
 /**
  * @brief Vérifie que le mot entré existe dans le dictionnaire
  */
-void verification();
+void verification(char mot, Dictionnaire* dico);
+
+/**
+ * @brief Assure l'affichage de la partie.
+ * @param j1 Le premier joueur
+ * @param j2 Le second joueur
+ */
+void affichage(Joueur* j1, Joueur* j2);
+
