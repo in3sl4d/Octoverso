@@ -9,4 +9,6 @@ add_executable(Octoverso main.c
         jeu.h
         dictionnaire.h
         jeu.c
-        chevalet.h)
+        chevalet.h
+        constantes.h
+        joueur.c)

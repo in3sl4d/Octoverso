@@ -11,12 +11,13 @@ typedef struct {
  Joueur* joueur1;
  Joueur* joueur2;
  Chevalet pioche[];
-};
+ char dejajoue[];
+}Partie;
 
 /**
  * @brief Permet d'initialiser une partie.
  */
-void initPartie();
+void initPartie(Partie* p);
 
 /**
  * @brief Distribue 12 chevalets à chacun des joueurs
@@ -26,9 +27,12 @@ void initPartie();
 void distribution(Joueur* joueur1, Joueur* joueur2);
 
 /**
- * @brief Vérifie que le mot entré existe dans le dictionnaire
+ * @brief Vérifie que le mot choisi existe
+ * @param mot Le mot choisi
+ * @param dico Le dictionnaire
+ * @return 1 si le mot existe, sinon 0
  */
-void verification(char mot, Dictionnaire* dico);
+int verification(char mot, Dictionnaire* dico);
 
 /**
  * @brief Assure l'affichage de la partie.
