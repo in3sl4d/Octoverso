@@ -22,5 +22,6 @@ int verification(const char mot, const Dictionnaire* dico) {
     for (int i = 0; i < dico->longueur-1; i++) {
         if (strcmp(mot, dico->mots[i]) == 0) {
             return 1;
-    return 0;
+            return 0;
+        }
 }

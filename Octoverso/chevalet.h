@@ -8,4 +8,4 @@ typedef struct {
     char lettre;
 } Chevalet;
 
-
+FILE * dico = fopen("dico.txt", "r");
