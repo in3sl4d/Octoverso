@@ -8,14 +8,18 @@
 #include "jeu.h"
 #include "joueur.h"
 #include "dictionnaire.h"
+#include "constantes.h"
 #pragma warning(disable:4996)
 
-void initPartie(Partie *partie) {
-
+void initPartie(Partie *p) {
+    p->joueur1 = initJoueur(p->joueur1);
+    p->joueur2 = initJoueur(p->joueur2);
 }
 
-void distribution(Joueur* joueur1, Joueur* joueur2) {
-
+void distribution(Joueur* j) {
+    for (int i = 0; i < 12; ++i) {
+        j->lettres[i] = 'a';
+    }
 }
 
 int verification(const char mot, const Dictionnaire* dico) {

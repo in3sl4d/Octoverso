@@ -13,10 +13,9 @@
 Joueur initJoueur(Partie* p) {
     Joueur j;
     scanf("%s", j.nom);
-    if (p->joueur1->ordre == 1)
-        j.ordre = 2;
-    else
+    if (p->joueur1->ordre == 0)
         j.ordre = 1;
-
+    else
+        j.ordre = 2;
     return j;
 }

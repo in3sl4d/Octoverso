@@ -6,13 +6,26 @@
 #include "joueur.h"
 #include "dictionnaire.h"
 #include "chevalet.h"
+#include "constantes.h"
 
 typedef struct {
  Joueur* joueur1;
  Joueur* joueur2;
  Chevalet pioche[];
+ Chevalet rail[];
  char dejajoue[];
 }Partie;
+
+typedef struct {
+ Chevalet PaquetTotal[MAX_LETTRES];
+} Paquet;
+
+
+/**
+ * @brief Initialise le paquet avec ses 88 chevalets
+ * @return
+ */
+Paquet initPaquet();
 
 /**
  * @brief Permet d'initialiser une partie.
