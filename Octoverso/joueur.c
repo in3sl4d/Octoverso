@@ -10,12 +10,11 @@
 #include "dictionnaire.h"
 #pragma warning(disable:4996)
 
-Joueur initJoueur(Partie* p) {
+Joueur initJoueur(int ordre) {
     Joueur j;
     scanf("%s", j.nom);
-    if (p->joueur1->ordre == 0)
-        j.ordre = 1;
-    else
-        j.ordre = 2;
+    if (ordre == 1 || ordre == 2) {
+        j.ordre = ordre;
+    }
     return j;
 }

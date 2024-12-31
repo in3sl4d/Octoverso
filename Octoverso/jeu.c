@@ -12,13 +12,13 @@
 #pragma warning(disable:4996)
 
 void initPartie(Partie *p) {
-    p->joueur1 = initJoueur(p->joueur1);
-    p->joueur2 = initJoueur(p->joueur2);
+    p->joueur1 = &(initJoueur(1));
+    p->joueur2 = &(initJoueur(2));
 }
 
 void distribution(Joueur* j) {
-    for (int i = 0; i < 12; ++i) {
-        j->lettres[i] = 'a';
+    for (int i = 0; i < NB_LETTRES_JOUEUR; ++i) {
+        // j->lettres[i] = 'a'; (Pb : impossible d'assigner char au type chevalet, à régler)
     }
 }
 
@@ -26,6 +26,8 @@ int verification(const char mot, const Dictionnaire* dico) {
     for (int i = 0; i < dico->longueur-1; i++) {
         if (strcmp(mot, dico->mots[i]) == 0) {
             return 1;
-            return 0;
+
         }
+    return 0;
+    }
 }

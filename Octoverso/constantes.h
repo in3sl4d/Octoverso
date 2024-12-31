@@ -9,4 +9,5 @@ enum {
     MAX_RAIL = 8,
     MIN_PIOCHE = 1,
     MAX_LETTRES = 88,
+    NB_LETTRES_JOUEUR = 12
 };

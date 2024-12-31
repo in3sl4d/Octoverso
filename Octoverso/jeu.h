@@ -11,8 +11,8 @@
 typedef struct {
  Joueur* joueur1;
  Joueur* joueur2;
- Chevalet pioche[];
- Chevalet rail[];
+ Chevalet pioche[MAX_LETTRES];
+ Chevalet rail[MAX_RAIL];
  char dejajoue[];
 }Partie;
 
@@ -33,11 +33,10 @@ Paquet initPaquet();
 void initPartie(Partie* p);
 
 /**
- * @brief Distribue 12 chevalets à chacun des joueurs
- * @param joueur1 Le premier joueur
- * @param joueur2 Le deuxième joueur
+ * @brief Distribue 12 chevalets à un joueur
+ * @param j Le joueur
  */
-void distribution(Joueur* joueur1, Joueur* joueur2);
+void distribution(Joueur* j);
 
 /**
  * @brief Vérifie que le mot choisi existe
@@ -45,7 +44,7 @@ void distribution(Joueur* joueur1, Joueur* joueur2);
  * @param dico Le dictionnaire
  * @return 1 si le mot existe, sinon 0
  */
-int verification(char mot, Dictionnaire* dico);
+int verification(const char mot, const Dictionnaire* dico);
 
 /**
  * @brief Assure l'affichage de la partie.
