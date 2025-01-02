@@ -1,14 +1,8 @@
-//
-// Created by Yoko on 23/12/2024.
-//
 #pragma once
-#include "jeu.h"
 
 typedef struct {
-    int longueur; // longueur du dictionnaire
-    char mots[]; // liste contenant tous les mots
-} Dictionnaire;
-
-//FILE * dico = fopen("dico.txt", "r"); (Essayer d'ouvrir et copier le contenu de dico.txt dans dictionnaire.h)
-
-
+    char** mots; // liste contenant tous les mots
+    int nbMots; // longueur du dictionnaire (combien de mots sont stockés)
+    int capacite; // capacite du dictionnaire (combien de mots on peut stocker)
+    int trie; // Vaut 1 si trie sinon 0 (revient a 0 avec ajout nouveau mot)
+}Dico;
