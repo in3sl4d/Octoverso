@@ -17,7 +17,7 @@ typedef struct {
  * @param ordre Le numéro du joueur créé
  * @return Le joueur créé
  */
-Joueur initJoueur(int ordre);
+Joueur* initJoueur(int ordre);
 
 /**
  * @brief Laisse au joueur le choix entre plusieurs actions

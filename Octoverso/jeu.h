@@ -9,17 +9,16 @@
 #include "constantes.h"
 
 typedef struct {
- Joueur* joueur1;
- Joueur* joueur2;
- Chevalet pioche[MAX_LETTRES];
- Chevalet rail[MAX_RAIL];
- char dejajoue[];
+ Joueur* joueur1; // Premier joueur enregistre
+ Joueur* joueur2; // Deuxieme joueur enregistre
+ Chevalet pioche[MAX_LETTRES]; // Chevalet restant après distribution
+ Chevalet rail[MAX_RAIL]; // De taille maximum 8
+ char dejajoue[]; // Stocke les mots déjà joué
 }Partie;
 
 typedef struct {
- Chevalet PaquetTotal[MAX_LETTRES];
+ Chevalet PaquetTotal[MAX_LETTRES]; // Paquet contenant tous les chevalets
 } Paquet;
-
 
 /**
  * @brief Initialise le paquet avec ses 88 chevalets
@@ -39,12 +38,25 @@ void initPartie(Partie* p);
 void distribution(Joueur* j);
 
 /**
+ * @return Le mot saisie
+ */
+char* saisieMot();
+
+/**
  * @brief Vérifie que le mot choisi existe
  * @param mot Le mot choisi
  * @param dico Le dictionnaire
  * @return 1 si le mot existe, sinon 0
  */
-int verification(const char mot, const Dictionnaire* dico);
+int verifDico(const char mot[5], const Dico* d);
+
+/**
+ * @brief Vérifie que le mot passé est utilisé avec la liste de chevalets
+ * @param mot Le mot passé par le joueur j
+ * @param j Le joueur
+ * @return 1 si le mot utilise bien les chevalets, sinon 0
+ */
+int verifChevalet(const char* mot[5], Joueur* j);
 
 /**
  * @brief Assure l'affichage de la partie.
