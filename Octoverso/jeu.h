@@ -24,8 +24,9 @@ typedef struct {
 /**
  * @brief Initialise le paquet avec ses 88 chevalets
  * @param p Le paquet
+ * @return 1 si initialisé, sinon 0
  */
-void initPaquet(Paquet* p);
+int initPaquet(Paquet* p);
 
 /**
  * @brief Permet d'initialiser une partie.
@@ -55,7 +56,7 @@ void ajouterChevalet(Paquet* p);
  * @param j Le joueur
  * @return 1 si le mot utilise bien les chevalets, sinon 0
  */
-int verifChevalet(const char* mot[5], Joueur* j);
+int verifChevalet(const char* mot, Joueur* j);
 
 /**
  * @brief Assure l'affichage de la partie.

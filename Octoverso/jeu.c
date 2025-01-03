@@ -36,9 +36,22 @@ void affichageChevalet(Partie* p) {
     }
 }
 
-void initPaquet(Paquet *p) {
-    p = (Paquet*)malloc(sizeof(Paquet));
-    p->paquetTotal;
+int initPaquet(Paquet *p) {
+    char lettre;
+    int nombre;
+    int taille = sizeof(p->paquetTotal) / sizeof(p->paquetTotal[0]);
+    for (int i = 0 ; i < (NB_LETTRES-1) ; ++i) {
+        printf("Entrez la lettre désirée et son nombre");
+        scanf("%s %d", &lettre, &nombre);
+        for (int j = 0; j < taille; ++j) {
+            if (lettre == p->paquetTotal[j].lettre.lettre ) {
+                return 0;
+            }
+            p->paquetTotal[i].lettre.lettre = lettre;
+            p->paquetTotal[i].nbChevalet = nombre;
+        }
+        return 1;
+    }
 }
 
 char* saisieMot() {
@@ -79,7 +92,7 @@ char* verso(Partie* r) {
     char reverse[taille];
     *mot = reverse;
     for (int i = 0; i < taille; ++i) {
-        mot[i] += r->rail[taille-i].lettre;
+        mot[i] = r->rail[(taille-1)-i].lettre;
     }
     return mot;
 }
