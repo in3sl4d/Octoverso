@@ -18,7 +18,7 @@ typedef struct {
 }Partie;
 
 typedef struct {
- Tuple PaquetTotal[MAX_LETTRES]; // Paquet contenant tous les chevalets sous forme de tuple
+ Tuple paquetTotal[MAX_LETTRES]; // Paquet contenant tous les chevalets sous forme de tuple
 } Paquet;
 
 /**
@@ -44,12 +44,10 @@ void distribution(Joueur* j, Paquet* p);
 char* saisieMot();
 
 /**
- * @brief Vérifie que le mot choisi existe
- * @param mot Le mot choisi
- * @param dico Le dictionnaire
- * @return 1 si le mot existe, sinon 0
+ * @brief Ajoute des chevalets dans le paquet principal
+ * @param p Le paquet
  */
-int verifDico(const char* mot, const Dico* d);
+void ajouterChevalet(Paquet* p);
 
 /**
  * @brief Vérifie que le mot passé est utilisé avec la liste de chevalets
@@ -63,5 +61,20 @@ int verifChevalet(const char* mot[5], Joueur* j);
  * @brief Assure l'affichage de la partie.
  * @param p La partie en cours
  */
-void affichage(Partie* p);
+void affichageChevalet(Partie* p);
+
+// Algorithmes utilisés lors du jeu
+
+/**
+ * @brief Trie les chevalets des joueurs par ordre alphabétique
+ * @param j Les chevalets du joueur
+ */
+void triChevalet(Joueur* j);
+
+/**
+ * @brief Renvoie l'inverse du rail
+ * @param r Le rail
+ * @return Le mot du rail à l'envers
+ */
+char* verso(Partie* r);
 
