@@ -5,7 +5,8 @@
 #include "dictionnaire.h"
 #include "joueur.h"
 
-int main(void) {
+
+int main() {
     Partie test;
     initPartie(&test);
 }

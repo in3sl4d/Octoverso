@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Octoverso.dir/joueur.c.obj.d"
   "CMakeFiles/Octoverso.dir/main.c.obj"
   "CMakeFiles/Octoverso.dir/main.c.obj.d"
+  "CMakeFiles/Octoverso.dir/tuple.c.obj"
+  "CMakeFiles/Octoverso.dir/tuple.c.obj.d"
   "Octoverso.exe"
   "Octoverso.exe.manifest"
   "Octoverso.pdb"

@@ -13,7 +13,7 @@ typedef struct {
 }Joueur;
 
 /**
- *
+ * @brief Initialise un joueur
  * @param ordre Le numéro du joueur créé
  * @return Le joueur créé
  */

@@ -17,15 +17,15 @@ void initPartie(Partie *p) {
     p->joueur2 = initJoueur(2);
 }
 
-void distribution(Joueur* j, const Dico* d) {
+void distribution(Joueur* j, Paquet* p) {
     Chevalet lettre;
     for (int i = 0; i < NB_LETTRES_JOUEUR; ++i) {
-        // lettre = d->mots[rand() % MAX_LETTRES];
+        // lettre = p->paquetTotal[rand() % MAX_LETTRES];
         j->lettres[i] = lettre;
     }
 }
 
-int verifDico(const char mot[4], const Dico* d) {
+int verifDico(const char* mot, const Dico* d) {
     for (int i = 0; i < d->nbMots-1; i++) {
         if (strcmp(mot, d->mots[i]) == 0) {
             return 1;
@@ -39,17 +39,16 @@ void affichage(Partie* p) {
     printf("%d : test \n", p->joueur2->ordre);
 }
 
-Paquet initPaquet() {
-    Paquet p;
-    for (int i = 0; i < MAX_LETTRES; ++i) {
-        // on ajoute le chevalet A 8 fois, puis le chevalet B 3 fois,...
-    }
+void initPaquet(Paquet *p) {
+    p = (Paquet*)malloc(sizeof(Paquet));
 }
 
 char* saisieMot() {
     char mot[TAILLE_PREMIER_MOT];
-    char* m = &mot[TAILLE_PREMIER_MOT];
-    scanf("Veuillez saisir un mot", mot);
+    scanf("%s", mot);
+    char* m;
+    m = (char*)malloc(sizeof(mot));
+    *m = mot;
     return m;
 }
 

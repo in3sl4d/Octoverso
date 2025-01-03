@@ -7,6 +7,7 @@
 #include "dictionnaire.h"
 #include "chevalet.h"
 #include "constantes.h"
+#include "tuple.h"
 
 typedef struct {
  Joueur* joueur1; // Premier joueur enregistre
@@ -17,14 +18,14 @@ typedef struct {
 }Partie;
 
 typedef struct {
- Chevalet PaquetTotal[MAX_LETTRES]; // Paquet contenant tous les chevalets
+ Tuple PaquetTotal[MAX_LETTRES]; // Paquet contenant tous les chevalets sous forme de tuple
 } Paquet;
 
 /**
  * @brief Initialise le paquet avec ses 88 chevalets
- * @return
+ * @param p Le paquet
  */
-Paquet initPaquet();
+void initPaquet(Paquet* p);
 
 /**
  * @brief Permet d'initialiser une partie.
@@ -35,7 +36,7 @@ void initPartie(Partie* p);
  * @brief Distribue 12 chevalets à un joueur
  * @param j Le joueur
  */
-void distribution(Joueur* j);
+void distribution(Joueur* j, Paquet* p);
 
 /**
  * @return Le mot saisie
@@ -48,7 +49,7 @@ char* saisieMot();
  * @param dico Le dictionnaire
  * @return 1 si le mot existe, sinon 0
  */
-int verifDico(const char mot[5], const Dico* d);
+int verifDico(const char* mot, const Dico* d);
 
 /**
  * @brief Vérifie que le mot passé est utilisé avec la liste de chevalets
@@ -60,8 +61,7 @@ int verifChevalet(const char* mot[5], Joueur* j);
 
 /**
  * @brief Assure l'affichage de la partie.
- * @param j1 Le premier joueur
- * @param j2 Le second joueur
+ * @param p La partie en cours
  */
-void affichage(Joueur* j1, Joueur* j2);
+void affichage(Partie* p);
 

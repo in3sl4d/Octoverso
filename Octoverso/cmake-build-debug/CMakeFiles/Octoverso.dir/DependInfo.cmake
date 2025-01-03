@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Utilisateur/Downloads/Octoverso_GITHUB/Octoverso/jeu.c" "CMakeFiles/Octoverso.dir/jeu.c.obj" "gcc" "CMakeFiles/Octoverso.dir/jeu.c.obj.d"
   "C:/Users/Utilisateur/Downloads/Octoverso_GITHUB/Octoverso/joueur.c" "CMakeFiles/Octoverso.dir/joueur.c.obj" "gcc" "CMakeFiles/Octoverso.dir/joueur.c.obj.d"
   "C:/Users/Utilisateur/Downloads/Octoverso_GITHUB/Octoverso/main.c" "CMakeFiles/Octoverso.dir/main.c.obj" "gcc" "CMakeFiles/Octoverso.dir/main.c.obj.d"
+  "C:/Users/Utilisateur/Downloads/Octoverso_GITHUB/Octoverso/tuple.c" "CMakeFiles/Octoverso.dir/tuple.c.obj" "gcc" "CMakeFiles/Octoverso.dir/tuple.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -12,7 +12,10 @@
 
 Joueur* initJoueur(int ordre) {
     Joueur j;
-    Joueur* jp = &j;
+    Joueur* jp;
+    jp = (Joueur*)malloc(sizeof(Joueur));
+    *jp = j;
+    printf("Entrez un nom : ");
     scanf("%s", jp->nom);
     if (ordre == 1 || ordre == 2) {
         jp->ordre = ordre;

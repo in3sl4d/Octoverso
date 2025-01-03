@@ -224,6 +224,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Octoverso.dir\build.make CMakeFiles/Octoverso.dir/main.c.s
 .PHONY : main.c.s
 
+tuple.obj: tuple.c.obj
+.PHONY : tuple.obj
+
+# target to build an object file
+tuple.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Octoverso.dir\build.make CMakeFiles/Octoverso.dir/tuple.c.obj
+.PHONY : tuple.c.obj
+
+tuple.i: tuple.c.i
+.PHONY : tuple.i
+
+# target to preprocess a source file
+tuple.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Octoverso.dir\build.make CMakeFiles/Octoverso.dir/tuple.c.i
+.PHONY : tuple.c.i
+
+tuple.s: tuple.c.s
+.PHONY : tuple.s
+
+# target to generate assembly for a file
+tuple.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Octoverso.dir\build.make CMakeFiles/Octoverso.dir/tuple.c.s
+.PHONY : tuple.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -245,6 +269,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... tuple.obj
+	@echo ... tuple.i
+	@echo ... tuple.s
 .PHONY : help
 
 

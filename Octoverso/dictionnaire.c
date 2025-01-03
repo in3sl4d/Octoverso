@@ -109,12 +109,11 @@ int chercherDico(Dico* d, char* mot) {
 	return -1;
 }
 
-int main() {
+/** int main() {
 	Dico dico;
 	initDico(&dico, 5);
 	remplirDico(&dico, "ods4.txt");
 	printf("%d %s\n", chercherDico(&dico, "AAS"), chercherDico(&dico, "AAS") >= 0 && chercherDico(&dico, "AAS") < tailleDico(&dico) ? obtenirDico(&dico, chercherDico(&dico, "AAS")) : "NULL");
 	printf("%d %s\n", chercherDico(&dico, "A"), chercherDico(&dico, "A") >= 0 && chercherDico(&dico, "A") < tailleDico(&dico) ? obtenirDico(&dico, chercherDico(&dico, "A")) : "NULL");
 	detruireDico(&dico);
-}
-
+} */
