@@ -85,14 +85,27 @@ void triChevalet(Joueur* j) {
     }
 }
 
-char* verso(Partie* r) {
+char* verso(const Partie* r) {
     char* mot;
     mot = (char*)malloc(sizeof(r->rail));
-    int taille = sizeof(r->rail) / sizeof(r->rail[0]);
+    const int taille = sizeof(r->rail) / sizeof(r->rail[0]);
     char reverse[taille];
     *mot = reverse;
     for (int i = 0; i < taille; ++i) {
         mot[i] = r->rail[(taille-1)-i].lettre;
     }
     return mot;
+}
+
+int verifChevalet(const char* mot, const Joueur* j) {
+    const int taille_mot = sizeof(*mot) / sizeof(mot[0]);
+    const int nb_chevalets = sizeof(j->lettres) / sizeof(j->lettres[0]);
+    int id = 0;
+    for (int i = 0; i < nb_chevalets; ++i) {
+        for (int f = 0; f < taille_mot; ++f)
+            if (mot[i] == j->lettres[f].lettre) {
+                id += 1;
+            }
+    }
+    return id == taille_mot;
 }
